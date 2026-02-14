@@ -40,7 +40,7 @@ const defaultProjects = [
   },
 ];
 
-const statusFilters = ['All', 'Planning', 'In Development', 'Under Construction', 'Completed', 'Stabilized'];
+const statusFilters = ['All', 'Planning', 'In Development', 'Under Construction', 'Stabilized', 'Completed'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');

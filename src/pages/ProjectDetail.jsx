@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/client';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
@@ -111,7 +111,8 @@ export default function ProjectDetail() {
 
   const { data: projects } = useQuery({
     queryKey: ['project', slug],
-    queryFn: () => base44.entities.Project.filter({ slug }),
+    queryFn: () => api.entities.Project.filter({ slug }),
+    enabled: !!slug,
     initialData: [],
   });
 
