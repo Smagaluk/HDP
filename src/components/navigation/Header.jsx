@@ -42,7 +42,7 @@ export default function Header() {
           {/* Logo */}
           <Link to={createPageUrl('Home')} className="flex items-center">
             <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698a455ff3c68745519ec29b/89fda9b95_Blue_Horizontal-removebg-preview.png" 
+              src="/website-assets/Logos/Blue_Horizontal-removebg-preview.png" 
               alt="Heritage Development Partners"
               className="h-10 lg:h-12 w-auto"
             />

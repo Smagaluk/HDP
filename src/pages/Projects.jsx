@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/client';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
@@ -47,7 +47,7 @@ export default function Projects() {
 
   const { data: projects } = useQuery({
     queryKey: ['projects'],
-    queryFn: () => base44.entities.Project.list('order'),
+    queryFn: () => api.entities.Project.list('order'),
     initialData: [],
   });
 

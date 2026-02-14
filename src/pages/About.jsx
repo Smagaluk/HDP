@@ -122,7 +122,7 @@ export default function About() {
             >
               <div className="aspect-[4/5] bg-stone-200 mb-6">
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698a455ff3c68745519ec29b/32a74ffda_BenSmith_IMG_8956.jpg"
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
                   alt="Ben Smith"
                   className="w-full h-full object-cover"
                 />
@@ -149,7 +149,7 @@ export default function About() {
             >
               <div className="aspect-[4/5] bg-stone-200 mb-6">
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698a455ff3c68745519ec29b/38bcb42cf_ScottMagaluk-crop-IMG_8821.jpg"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
                   alt="Scott Magaluk"
                   className="w-full h-full object-cover"
                 />
