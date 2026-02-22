@@ -134,8 +134,13 @@ export default function About() {
                 Managing Partner
               </p>
               <p className="text-[#474E5E] leading-relaxed">
-                Ben brings extensive experience in real estate development and investment management, 
-                with a focus on adaptive reuse and mixed-use projects across Michigan.
+                Ben is an experienced real estate professional with over 20 years of diverse experience across many areas of the industry. Prior to joining Heritage Development Partners, Ben spent time as a principal with an investment firm focused on syndications for value-add multifamily investments, and previously was a partner with a large Midwest-based real estate investment advisory and asset management firm, helping to oversee over $1 billion in investments on behalf of institutional and family office/high net worth clients.
+              </p>
+              <p className="text-[#474E5E] leading-relaxed mt-4">
+                Ben&apos;s expertise includes deep experience in deal structuring, financial underwriting, and creative capital stack creation. Ben also has extensive experience in the full lifecycle of the real estate development process from acquisition, design, and entitlement through project completion.
+              </p>
+              <p className="text-[#474E5E] leading-relaxed mt-4">
+                Ben holds a Master&apos;s Degree in Urban Planning with an emphasis on real estate finance and development from the University of Michigan. Outside of the office, he enjoys spending time with family, exploring new culinary endeavors, traveling, and relaxing on the shores of any lake that will have him.
               </p>
             </motion.div>
 
@@ -161,8 +166,13 @@ export default function About() {
                 Managing Partner
               </p>
               <p className="text-[#474E5E] leading-relaxed">
-                Scott specializes in capital structuring and public-private partnerships, 
-                leveraging his expertise to navigate complex financing structures and stakeholder relationships.
+                Scott possesses over eight years of expertise in the commercial real estate sector, having successfully sourced, developed, and managed assets totaling $45M. His comprehensive experience spans construction management, asset management, and fostering robust investor relations.
+              </p>
+              <p className="text-[#474E5E] leading-relaxed mt-4">
+                Before joining Heritage Development Partners, Scott was instrumental in the development of over 75,000 square feet of historic adaptive reuse projects in Baltimore, MD, through his association with Urban Scene Development. He specialized in leveraging project incentives, notably federal and state historic tax credits as well as new markets tax credits.
+              </p>
+              <p className="text-[#474E5E] leading-relaxed mt-4">
+                Scott earned both an MBA and a Masters in Real Estate and Infrastructure from the Johns Hopkins Carey Business School. Outside of his professional commitments, Scott cherishes moments with his family, has a penchant for exploring new destinations, and relishes outdoor activities.
               </p>
             </motion.div>
           </div>
