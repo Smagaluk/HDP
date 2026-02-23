@@ -10,7 +10,7 @@ export function middleware(request) {
   if (!isProdDeployment) {
     return NextResponse.next();
   }
-  if (pathname === '/manage-projects') {
+  if (pathname === '/projects/manage') {
     return NextResponse.json({ error: 'Not Found' }, { status: 404 });
   }
   if (pathname === '/api/projects' && ['POST', 'PUT'].includes(request.method)) {
@@ -24,7 +24,7 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    '/manage-projects',
+    '/projects/manage',
     '/api/projects',
     '/api/admin/upload',
   ],

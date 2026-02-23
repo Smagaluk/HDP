@@ -4,11 +4,12 @@
 const ROUTE_MAP = {
   Home: "/",
   About: "/about",
+  Team: "/about/team",
   Contact: "/contact",
   Projects: "/projects",
   Capabilities: "/capabilities",
   Investors: "/investors",
-  ManageProjects: "/manage-projects",
+  ManageProjects: "/projects/manage",
 };
 
 export function createPageUrl(pageName: string) {

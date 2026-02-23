@@ -138,14 +138,6 @@ export default function ProjectDetail({ slug: slugProp }) {
         </div>
       </div>
 
-      {/* Hero Image Carousel */}
-      <ProjectGallery 
-        images={project.gallery_images?.length > 0 
-          ? project.gallery_images 
-          : [project.image_url || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80']
-        } 
-      />
-
       {/* Content */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -184,23 +176,6 @@ export default function ProjectDetail({ slug: slugProp }) {
                       </li>
                     ))}
                   </ul>
-
-                  {/* Video Embed for FYNC */}
-                  {slug === 'FYNC' && (
-                    <div className="mt-10 flex justify-center">
-                      <iframe 
-                        title="vimeo-player" 
-                        src="https://player.vimeo.com/video/917642924?h=128b1ac127" 
-                        width="640" 
-                        height="360" 
-                        frameBorder="0" 
-                        referrerPolicy="strict-origin-when-cross-origin" 
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                        allowFullScreen
-                        className="max-w-full"
-                      />
-                    </div>
-                  )}
                 </div>
               </motion.div>
             </div>
@@ -273,7 +248,13 @@ export default function ProjectDetail({ slug: slugProp }) {
         </div>
       </section>
 
-
+      {/* Image Carousel */}
+      <ProjectGallery 
+        images={project.gallery_images?.length > 0 
+          ? project.gallery_images 
+          : [project.image_url || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80']
+        } 
+      />
     </div>
   );
 }

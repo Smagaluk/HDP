@@ -44,7 +44,7 @@ export default function FeaturedProjects({ projects }) {
           <SectionHeading
             eyebrow="Portfolio"
             title="Featured Projects"
-            description="A selection of our current and completed developments across Michigan."
+            description="A selection of our current and completed projects."
           />
           <Link
             href={createPageUrl('Projects')}

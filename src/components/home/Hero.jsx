@@ -29,10 +29,10 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-xs font-semibold tracking-widest uppercase text-[#1B2944] mb-6">
-                Real Estate Development · Michigan
+                Real Estate Investment and Development
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#070707] tracking-tight leading-[1.1]">
-                Building durable places that create long-term value.
+                Building Legacy to create long-term value.
               </h1>
               <p className="mt-8 text-lg lg:text-xl text-[#474E5E] leading-relaxed max-w-xl">
                 Heritage Development Partners develops and operates mixed-use and 

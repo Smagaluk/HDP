@@ -12,10 +12,17 @@ const navLinks = [
     name: 'About', 
     page: 'About',
     submenu: [
+      { name: 'Team', page: 'Team' },
       { name: 'Contact', page: 'Contact' }
     ]
   },
-  { name: 'Projects', page: 'Projects' },
+  { 
+    name: 'Projects', 
+    page: 'Projects',
+    submenu: [
+      { name: 'Manage Projects', page: 'ManageProjects' }
+    ]
+  },
   { name: 'Capabilities', page: 'Capabilities' },
   { name: 'Investors', page: 'Investors' },
 ];
@@ -23,8 +30,8 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aboutHovered, setAboutHovered] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [hoveredNav, setHoveredNav] = useState(null);
+  const [mobileExpandedNav, setMobileExpandedNav] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,12 +64,13 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => {
               if (link.submenu) {
+                const isHovered = hoveredNav === link.name;
                 return (
                   <div
                     key={link.name}
                     className="relative"
-                    onMouseEnter={() => setAboutHovered(true)}
-                    onMouseLeave={() => setAboutHovered(false)}
+                    onMouseEnter={() => setHoveredNav(link.name)}
+                    onMouseLeave={() => setHoveredNav(null)}
                   >
                     <Link
                       href={createPageUrl(link.page)}
@@ -71,10 +79,10 @@ export default function Header() {
                       }`}
                     >
                       {link.name}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${aboutHovered ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isHovered ? 'rotate-180' : ''}`} />
                     </Link>
                     <AnimatePresence>
-                      {aboutHovered && (
+                      {isHovered && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -137,6 +145,7 @@ export default function Header() {
             <nav className="px-6 py-6 space-y-4">
               {navLinks.map((link) => {
                 if (link.submenu) {
+                  const isExpanded = mobileExpandedNav === link.name;
                   return (
                     <div key={link.name}>
                       <div className="flex items-center justify-between">
@@ -148,15 +157,15 @@ export default function Header() {
                           {link.name}
                         </Link>
                         <button
-                          onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                          onClick={() => setMobileExpandedNav(isExpanded ? null : link.name)}
                           className="p-1"
                           aria-label="Toggle submenu"
                         >
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAboutOpen ? 'rotate-180' : ''}`} />
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
                         </button>
                       </div>
                       <AnimatePresence>
-                        {mobileAboutOpen && (
+                        {isExpanded && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
@@ -169,7 +178,7 @@ export default function Header() {
                                 href={createPageUrl(subItem.page)}
                                 onClick={() => {
                                   setMobileMenuOpen(false);
-                                  setMobileAboutOpen(false);
+                                  setMobileExpandedNav(null);
                                 }}
                                 className="block text-sm text-[#474E5E] hover:text-[#1B2944] transition-colors"
                               >

@@ -20,7 +20,7 @@ export default function ProjectGallery({ images = [] }) {
     <section className="py-16 lg:py-24 bg-[#F3F2ED]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Image */}
-        <div className="relative aspect-[16/9] bg-white overflow-hidden">
+        <div className="group relative aspect-[16/9] bg-white overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -40,54 +40,41 @@ export default function ProjectGallery({ images = [] }) {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Arrows */}
+          {/* Click zones: left = previous, right = next */}
           {images.length > 1 && (
             <>
               <button
+                type="button"
                 onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-colors"
+                className="absolute left-0 top-0 bottom-0 w-1/2 cursor-pointer border-0 outline-none bg-transparent"
+                aria-label="Previous image"
+              />
+              <button
+                type="button"
+                onClick={goToNext}
+                className="absolute right-0 top-0 bottom-0 w-1/2 cursor-pointer border-0 outline-none bg-transparent"
+                aria-label="Next image"
+              />
+              {/* Chevrons - visible on hover */}
+              <button
+                type="button"
+                onClick={goToPrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-opacity border-0 outline-none opacity-0 group-hover:opacity-100 z-10 pointer-events-none"
+                aria-hidden
               >
                 <ChevronLeft className="w-6 h-6 text-[#070707]" />
               </button>
               <button
+                type="button"
                 onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-opacity border-0 outline-none opacity-0 group-hover:opacity-100 z-10 pointer-events-none"
+                aria-hidden
               >
                 <ChevronRight className="w-6 h-6 text-[#070707]" />
               </button>
             </>
           )}
-
-          {/* Counter */}
-          <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-[#070707]/80 text-white text-sm">
-            {currentIndex + 1} / {images.length}
-          </div>
         </div>
-
-        {/* Thumbnails */}
-        {images.length > 1 && (
-          <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
-            {images.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`flex-shrink-0 w-24 h-16 overflow-hidden transition-all ${
-                  index === currentIndex
-                    ? 'ring-2 ring-[#1B2944] opacity-100'
-                    : 'opacity-60 hover:opacity-100'
-                }`}
-              >
-                <Image
-                  src={image}
-                  alt={`Thumbnail ${index + 1}`}
-                  width={96}
-                  height={64}
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );
