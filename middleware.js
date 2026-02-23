@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-  if (process.env.NODE_ENV !== 'production') {
+  const vercelEnv = process.env.VERCEL_ENV;
+  const isProdDeployment =
+    vercelEnv === 'production' || (!vercelEnv && process.env.NODE_ENV === 'production');
+
+  if (!isProdDeployment) {
     return NextResponse.next();
   }
   const { pathname } = request.nextUrl;

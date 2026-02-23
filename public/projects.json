@@ -27,31 +27,6 @@
   },
   {
     "id": 2,
-    "name": "Adam Project",
-    "slug": "trinity-health-gr",
-    "location": "Grand Rapids, MI",
-    "status": "Planning",
-    "project_type": "Mixed-Use",
-    "overview": "Early-stage mixed-use development partnership evaluating feasibility.",
-    "investment_thesis": "Healthcare-anchored developments benefit from stable, creditworthy tenants and community support.",
-    "highlights": [
-      "Healthcare system partnership",
-      "Early-stage feasibility analysis",
-      "Community stakeholder engagement",
-      "Mixed-use program evaluation",
-      "Long-term ground lease structure under consideration"
-    ],
-    "square_feet": "TBD",
-    "units": "TBD",
-    "featured": true,
-    "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    "gallery_images": [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"
-    ]
-  },
-  {
-    "id": 3,
     "name": "Factory Yards",
     "slug": "factory-yards",
     "location": "Grand Rapids, MI",
@@ -78,28 +53,7 @@
     ]
   },
   {
-    "id": 4,
-    "name": "New project ADam",
-    "slug": "new-project-1771818173406",
-    "location": "",
-    "status": "Planning",
-    "project_type": "Mixed-Use",
-    "overview": "",
-    "investment_thesis": "",
-    "highlights": [],
-    "square_feet": "1551 SF",
-    "units": "",
-    "featured": false,
-    "image_url": "",
-    "gallery_images": [
-      "/website-assets/projects/new-project-1771818173406/Screenshot_20260206-175248.png",
-      "/website-assets/projects/new-project-1771818173406/Screenshot_20260206-175252.png",
-      "/website-assets/projects/new-project-1771818173406/Screenshot_20260206-175257.png",
-      "/website-assets/projects/new-project-1771818173406/Screenshot_20260206-175300.png"
-    ]
-  },
-  {
-    "id": 5,
+    "id": 3,
     "name": "The Amo",
     "slug": "the-amo",
     "location": "Detroit, MI",
@@ -125,7 +79,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 4,
     "name": "Trinity Health Grand Rapids",
     "slug": "trinity-health-gr",
     "location": "Grand Rapids, MI",
