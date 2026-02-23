@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -42,7 +42,7 @@ export default function Partners() {
               execution, transparent communication, and long-term value creation.
             </p>
             <Link
-              to={createPageUrl('Investors')}
+              href={createPageUrl('Investors')}
               className="inline-flex items-center mt-8 text-sm font-medium text-white hover:text-[#F3F2ED]/80 transition-colors"
             >
               Partner With Us

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from '@/api/client';
@@ -14,6 +16,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Upload, X, Loader2, Image as ImageIcon, Save, Plus } from 'lucide-react';
+import Image from 'next/image';
 import { toast } from 'sonner';
 
 const STATUS_OPTIONS = ['Planning', 'In Development', 'Under Construction', 'Completed', 'Stabilized'];
@@ -129,7 +132,9 @@ export default function ManageProjects() {
     if (files.length === 0) return;
     setUploading(true);
     try {
-      const uploadPromises = files.map((file) => api.integrations.Core.UploadFile({ file }));
+      const uploadPromises = files.map((file) =>
+        api.integrations.Core.UploadFile({ file, slug: project.slug })
+      );
       const results = await Promise.all(uploadPromises);
       const newImageUrls = results.map((r) => r.file_url);
       const currentGallery = project.gallery_images || [];
@@ -414,9 +419,11 @@ export default function ManageProjects() {
                         Primary image
                       </h3>
                       <div className="relative aspect-[16/9] bg-stone-100 overflow-hidden rounded-md">
-                        <img
+                        <Image
                           src={currentProject.image_url}
                           alt="Primary"
+                          width={800}
+                          height={600}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -434,9 +441,11 @@ export default function ManageProjects() {
                             key={index}
                             className="relative group aspect-video bg-stone-100 overflow-hidden rounded-md"
                           >
-                            <img
+                            <Image
                               src={imageUrl}
                               alt={`Gallery ${index + 1}`}
+                              width={200}
+                              height={150}
                               className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">

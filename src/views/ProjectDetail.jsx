@@ -1,7 +1,9 @@
+"use client";
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '@/api/client';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowLeft, MapPin, Calendar, Building2, CheckCircle } from 'lucide-react';
@@ -105,9 +107,12 @@ const defaultProjects = {
   },
 };
 
-export default function ProjectDetail() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const slug = urlParams.get('slug');
+export default function ProjectDetail({ slug: slugProp }) {
+  const slugFromUrl =
+    typeof window !== 'undefined'
+      ? new URLSearchParams(window.location.search).get('slug')
+      : null;
+  const slug = slugProp ?? slugFromUrl ?? 'factory-yards';
 
   const { data: projects } = useQuery({
     queryKey: ['project', slug],
@@ -124,7 +129,7 @@ export default function ProjectDetail() {
       <div className="bg-white border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
           <Link
-            to={createPageUrl('Projects')}
+            href={createPageUrl('Projects')}
             className="inline-flex items-center text-sm text-[#474E5E] hover:text-[#070707] transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -255,7 +260,7 @@ export default function ProjectDetail() {
 
                   <div className="mt-8 pt-6 border-t border-[#474E5E]/20">
                     <Link
-                      to={createPageUrl('Contact')}
+                      href={createPageUrl('Contact')}
                       className="block w-full text-center px-6 py-3 bg-[#1B2944] text-white text-sm font-medium hover:bg-[#070707] transition-colors"
                     >
                       Inquire About This Project

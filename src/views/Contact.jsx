@@ -1,12 +1,14 @@
+"use client";
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
-import SectionHeading from '@/components/ui/SectionHeading';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -250,9 +252,11 @@ export default function Contact() {
               with deep expertise in Detroit, Grand Rapids, and Northern Michigan.
             </p>
             <div className="aspect-[21/9] bg-stone-200 overflow-hidden">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
                 alt="Michigan landscape"
+                width={1200}
+                height={600}
                 className="w-full h-full object-cover"
               />
             </div>

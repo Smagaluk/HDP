@@ -1,9 +1,10 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { createPageUrl } from '@/utils';
 import { ArrowRight, Building2, TrendingUp, Landmark, BarChart3 } from 'lucide-react';
-import SectionHeading from '@/components/ui/SectionHeading';
 
 const capabilities = [
   {
@@ -119,7 +120,7 @@ export default function Capabilities() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="space-y-24">
-            {capabilities.map((capability, capIndex) => (
+            {capabilities.map((capability, _capIndex) => (
               <motion.div
                 key={capability.id}
                 initial={{ opacity: 0, y: 40 }}
@@ -184,14 +185,14 @@ export default function Capabilities() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to={createPageUrl('Contact')}
+                href={createPageUrl('Contact')}
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#070707] text-sm font-medium tracking-wide hover:bg-[#F3F2ED] transition-colors"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
-                to={createPageUrl('Projects')}
+                href={createPageUrl('Projects')}
                 className="inline-flex items-center justify-center px-8 py-4 border border-[#F3F2ED]/30 text-white text-sm font-medium tracking-wide hover:border-white transition-colors"
               >
                 View Our Portfolio

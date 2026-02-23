@@ -1,8 +1,11 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { createPageUrl } from '@/utils';
-import { ArrowRight, TrendingUp, Clock, Shield, Users, Building2, FileText } from 'lucide-react';
+import { ArrowRight, TrendingUp, Clock, Shield, Users } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const principles = [
@@ -71,7 +74,7 @@ export default function Investors() {
                 operator with deep local expertise.
               </p>
               <Link
-                to={createPageUrl('Contact')}
+                href={createPageUrl('Contact')}
                 className="inline-flex items-center mt-8 px-8 py-4 bg-[#1B2944] text-white text-sm font-medium tracking-wide hover:bg-[#070707] transition-colors"
               >
                 Start a Conversation
@@ -85,9 +88,11 @@ export default function Investors() {
               className="relative"
             >
               <div className="aspect-[4/3] bg-stone-200 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80"
                   alt="Real estate investment"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -191,7 +196,7 @@ export default function Investors() {
             </div>
             <div className="lg:text-right">
               <Link
-                to={createPageUrl('Contact')}
+                href={createPageUrl('Contact')}
                 className="inline-flex items-center px-8 py-4 bg-white text-[#070707] text-sm font-medium tracking-wide hover:bg-stone-100 transition-colors"
               >
                 Contact Our Team
