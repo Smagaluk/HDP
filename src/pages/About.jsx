@@ -76,8 +76,7 @@ export default function About() {
           <div className="max-w-3xl">
             <SectionHeading
               eyebrow="Our Story"
-              title="Built on experience, driven by purpose."
-            />
+              title="Built on experience, driven by purpose." description={undefined}            />
             <div className="mt-8 space-y-6 text-[#474E5E] leading-relaxed">
               <p>
                 Heritage Development Partners brings together deep expertise in real estate 
@@ -109,8 +108,7 @@ export default function About() {
           <SectionHeading
             eyebrow="Leadership"
             title="Meet our partners."
-            align="center"
-          />
+            align="center" description={undefined}          />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Ben Smith */}
             <motion.div
@@ -185,8 +183,7 @@ export default function About() {
           <SectionHeading
             eyebrow="Our Values"
             title="Principles that guide every decision."
-            align="center"
-          />
+            align="center" description={undefined}          />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
