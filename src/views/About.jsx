@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { createPageUrl } from '@/utils';
 import { ArrowRight, Shield, Target, Users, Award } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -59,9 +62,11 @@ export default function About() {
               className="relative"
             >
               <div className="aspect-[4/3] bg-stone-200 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
                   alt="Heritage Development Partners office"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -121,9 +126,11 @@ export default function About() {
               className="bg-white p-8"
             >
               <div className="aspect-[4/5] bg-stone-200 mb-6">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
                   alt="Ben Smith"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -153,9 +160,11 @@ export default function About() {
               className="bg-white p-8"
             >
               <div className="aspect-[4/5] bg-stone-200 mb-6">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
                   alt="Scott Magaluk"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -253,14 +262,14 @@ export default function About() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to={createPageUrl('Projects')}
+                href={createPageUrl('Projects')}
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#1B2944] text-white text-sm font-medium tracking-wide hover:bg-[#070707] transition-colors"
               >
                 View Our Projects
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
-                to={createPageUrl('Contact')}
+                href={createPageUrl('Contact')}
                 className="inline-flex items-center justify-center px-8 py-4 border border-[#474E5E] text-[#070707] text-sm font-medium tracking-wide hover:border-[#1B2944] transition-colors"
               >
                 Contact Us

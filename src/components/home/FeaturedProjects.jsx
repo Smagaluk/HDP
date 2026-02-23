@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
@@ -46,7 +47,7 @@ export default function FeaturedProjects({ projects }) {
             description="A selection of our current and completed developments across Michigan."
           />
           <Link
-            to={createPageUrl('Projects')}
+            href={createPageUrl('Projects')}
             className="inline-flex items-center text-sm font-medium text-[#474E5E] hover:text-[#1B2944] transition-colors"
           >
             View All Projects
@@ -64,13 +65,15 @@ export default function FeaturedProjects({ projects }) {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link
-                to={createPageUrl(`ProjectDetail?slug=${project.slug}`)}
+                href={createPageUrl(`ProjectDetail?slug=${project.slug}`)}
                 className="group block"
               >
                 <div className="aspect-[4/3] bg-[#F3F2ED] overflow-hidden mb-6">
-                  <img
+                  <Image
                     src={project.image_url || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'}
                     alt={project.name}
+                    width={800}
+                    height={600}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>

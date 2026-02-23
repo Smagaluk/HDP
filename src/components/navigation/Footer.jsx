@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { createPageUrl } from '@/utils';
 
 const footerLinks = [
@@ -37,7 +37,7 @@ export default function Footer() {
               {footerLinks.map((link) =>
               <Link
                 key={link.name}
-                to={createPageUrl(link.page)}
+                href={createPageUrl(link.page)}
                 className="block text-sm text-[#F3F2ED]/70 hover:text-white transition-colors">
 
                   {link.name}

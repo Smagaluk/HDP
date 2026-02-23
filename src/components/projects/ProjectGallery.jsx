@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -21,16 +22,22 @@ export default function ProjectGallery({ images = [] }) {
         {/* Main Image */}
         <div className="relative aspect-[16/9] bg-white overflow-hidden">
           <AnimatePresence mode="wait">
-            <motion.img
+            <motion.div
               key={currentIndex}
-              src={images[currentIndex]}
-              alt={`Gallery image ${currentIndex + 1}`}
-              className="w-full h-full object-cover"
+              className="relative w-full h-full"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-            />
+            >
+              <Image
+                src={images[currentIndex]}
+                alt={`Gallery image ${currentIndex + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </motion.div>
           </AnimatePresence>
 
           {/* Navigation Arrows */}
@@ -70,9 +77,11 @@ export default function ProjectGallery({ images = [] }) {
                     : 'opacity-60 hover:opacity-100'
                 }`}
               >
-                <img
+                <Image
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
+                  width={96}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </button>

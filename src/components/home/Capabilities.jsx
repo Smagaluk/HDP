@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight, Building2, TrendingUp, Landmark, BarChart3 } from 'lucide-react';
@@ -39,7 +39,7 @@ export default function Capabilities() {
             description="We operate as an integrated platform, managing every stage of the real estate investment lifecycle."
           />
           <Link
-            to={createPageUrl('Capabilities')}
+            href={createPageUrl('Capabilities')}
             className="inline-flex items-center text-sm font-medium text-[#474E5E] hover:text-[#1B2944] transition-colors"
           >
             Learn More
