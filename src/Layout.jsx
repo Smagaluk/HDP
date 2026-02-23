@@ -1,6 +1,8 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
+
 
 export default function Layout({ children }) {
   return (
@@ -32,6 +34,7 @@ export default function Layout({ children }) {
       <Header />
       <main className="flex-1">
         {children}
+        <Analytics />
       </main>
       <Footer />
     </div>
