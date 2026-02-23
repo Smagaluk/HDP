@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { createPageUrl } from '@/utils';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -40,10 +43,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link to={createPageUrl('Home')} className="flex items-center">
-            <img 
-              src="/website-assets/Logos/Blue_Horizontal-removebg-preview.png" 
+          <Link href={createPageUrl('Home')} className="flex items-center">
+            <Image
+              src="/website-assets/Logos/Blue_Horizontal-removebg-preview.png"
               alt="Heritage Development Partners"
+              width={200}
+              height={48}
               className="h-10 lg:h-12 w-auto"
             />
           </Link>
@@ -60,7 +65,7 @@ export default function Header() {
                     onMouseLeave={() => setAboutHovered(false)}
                   >
                     <Link
-                      to={createPageUrl(link.page)}
+                      href={createPageUrl(link.page)}
                       className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#1B2944] ${
                         isScrolled ? 'text-[#474E5E]' : 'text-[#474E5E]'
                       }`}
@@ -80,7 +85,7 @@ export default function Header() {
                           {link.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}
-                              to={createPageUrl(subItem.page)}
+                              href={createPageUrl(subItem.page)}
                               className="block px-4 py-2 text-sm text-[#474E5E] hover:bg-stone-50 hover:text-[#1B2944] transition-colors"
                             >
                               {subItem.name}
@@ -95,7 +100,7 @@ export default function Header() {
               return (
                 <Link
                   key={link.name}
-                  to={createPageUrl(link.page)}
+                  href={createPageUrl(link.page)}
                   className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#1B2944] ${
                     isScrolled ? 'text-[#474E5E]' : 'text-[#474E5E]'
                   }`}
@@ -136,7 +141,7 @@ export default function Header() {
                     <div key={link.name}>
                       <div className="flex items-center justify-between">
                         <Link
-                          to={createPageUrl(link.page)}
+                          href={createPageUrl(link.page)}
                           onClick={() => setMobileMenuOpen(false)}
                           className="text-base font-medium text-[#474E5E] hover:text-[#1B2944] transition-colors"
                         >
@@ -161,7 +166,7 @@ export default function Header() {
                             {link.submenu.map((subItem) => (
                               <Link
                                 key={subItem.name}
-                                to={createPageUrl(subItem.page)}
+                                href={createPageUrl(subItem.page)}
                                 onClick={() => {
                                   setMobileMenuOpen(false);
                                   setMobileAboutOpen(false);
@@ -180,7 +185,7 @@ export default function Header() {
                 return (
                   <Link
                     key={link.name}
-                    to={createPageUrl(link.page)}
+                    href={createPageUrl(link.page)}
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-base font-medium text-[#474E5E] hover:text-[#1B2944] transition-colors"
                   >

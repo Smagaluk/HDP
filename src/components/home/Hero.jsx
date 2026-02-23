@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -40,14 +41,14 @@ export default function Hero() {
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
-                  to={createPageUrl('Projects')}
+                  href={createPageUrl('Projects')}
                   className="inline-flex items-center justify-center px-8 py-4 bg-[#1B2944] text-white text-sm font-medium tracking-wide hover:bg-[#070707] transition-colors"
                 >
                   View Projects
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
-                  to={createPageUrl('Contact')}
+                  href={createPageUrl('Contact')}
                   className="inline-flex items-center justify-center px-8 py-4 border border-[#474E5E] text-[#070707] text-sm font-medium tracking-wide hover:border-[#1B2944] transition-colors"
                 >
                   Get in Touch
@@ -64,9 +65,11 @@ export default function Hero() {
             className="relative"
           >
             <div className="aspect-[4/5] bg-stone-200 overflow-hidden">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
                 alt="Historic brick factory adaptive reuse building"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover"
               />
             </div>

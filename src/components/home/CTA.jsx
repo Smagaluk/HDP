@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -24,14 +24,14 @@ export default function CTA() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to={createPageUrl('Contact')}
+              href={createPageUrl('Contact')}
               className="inline-flex items-center justify-center px-8 py-4 bg-[#1B2944] text-white text-sm font-medium tracking-wide hover:bg-[#070707] transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
             <Link
-              to={createPageUrl('About')}
+              href={createPageUrl('About')}
               className="inline-flex items-center justify-center px-8 py-4 border border-[#474E5E] text-[#070707] text-sm font-medium tracking-wide hover:border-[#1B2944] transition-colors"
             >
               Learn About Us

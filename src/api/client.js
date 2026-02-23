@@ -1,78 +1,55 @@
 /**
- * Local API client (replaces Base44). Uses in-memory project data with localStorage persistence.
- * Replace with your own backend when ready.
+ * API client: projects from /api/projects (markdown in dev, static JSON in prod).
  */
-import projectList from './projectData';
-
-const STORAGE_KEY = 'heritage_build_value_projects';
-
-function loadProjects() {
-  if (typeof window === 'undefined') return [...projectList];
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      return Array.isArray(parsed) ? parsed : [...projectList];
-    }
-  } catch (_) {}
-  return [...projectList];
+async function fetchProjects() {
+  const res = await fetch('/api/projects');
+  if (!res.ok) throw new Error('Failed to fetch projects');
+  return res.json();
 }
-
-function saveProjects(projectsToSave) {
-  if (typeof window === 'undefined') return;
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(projectsToSave));
-  } catch (_) {}
-}
-
-let projects = loadProjects();
 
 const Project = {
-  list() {
-    return Promise.resolve([...projects].sort((a, b) => (a.id || 0) - (b.id || 0)));
+  async list() {
+    const projects = await fetchProjects();
+    return [...projects].sort((a, b) => (a.id || 0) - (b.id || 0));
   },
-  create(data = {}) {
-    const maxId = projects.reduce((m, p) => Math.max(m, Number(p.id) || 0), 0);
-    const newProject = {
-      id: maxId + 1,
-      name: data.name ?? 'New project',
-      slug: data.slug ?? `new-project-${maxId + 1}`,
-      location: data.location ?? '',
-      status: data.status ?? 'Planning',
-      project_type: data.project_type ?? 'Mixed-Use',
-      overview: data.overview ?? '',
-      investment_thesis: data.investment_thesis ?? '',
-      highlights: Array.isArray(data.highlights) ? data.highlights : [],
-      square_feet: data.square_feet ?? '',
-      units: data.units ?? '',
-      featured: !!data.featured,
-      image_url: data.image_url ?? '',
-      gallery_images: Array.isArray(data.gallery_images) ? data.gallery_images : [],
-    };
-    projects.push(newProject);
-    saveProjects(projects);
-    return Promise.resolve(newProject);
+  async create(data = {}) {
+    const res = await fetch('/api/projects', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Failed to create project');
+    }
+    return res.json();
   },
   filter(filters = {}, _order, limit) {
-    let result = [...projects];
-    if (filters.featured !== undefined) {
-      result = result.filter((p) => p.featured === filters.featured);
-    }
-    if (filters.slug !== undefined) {
-      result = result.filter((p) => p.slug === filters.slug);
-    }
-    if (typeof limit === 'number') {
-      result = result.slice(0, limit);
-    }
-    return Promise.resolve(result);
+    return this.list().then((projects) => {
+      let result = [...projects];
+      if (filters.featured !== undefined) {
+        result = result.filter((p) => p.featured === filters.featured);
+      }
+      if (filters.slug !== undefined) {
+        result = result.filter((p) => p.slug === filters.slug);
+      }
+      if (typeof limit === 'number') {
+        result = result.slice(0, limit);
+      }
+      return result;
+    });
   },
-  update(id, data) {
-    const index = projects.findIndex((p) => p.id === id || String(p.id) === String(id));
-    if (index >= 0) {
-      projects[index] = { ...projects[index], ...data };
-      saveProjects(projects);
+  async update(id, data) {
+    const res = await fetch('/api/projects', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, ...data }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Failed to update project');
     }
-    return Promise.resolve();
+    return res.json();
   },
 };
 
@@ -82,12 +59,28 @@ const auth = {
   },
   logout() {},
   redirectToLogin() {
-    window.location.href = '/';
+    if (typeof window !== 'undefined') window.location.href = '/';
   },
 };
 
+async function uploadFileViaAPI(file, slug) {
+  const form = new FormData();
+  form.append('file', file);
+  if (slug) form.append('slug', slug);
+  const res = await fetch('/api/admin/upload', { method: 'POST', body: form });
+  if (!res.ok) throw new Error('Upload failed');
+  const data = await res.json();
+  return data.file_url || (data.file_urls && data.file_urls[0]);
+}
+
 const Core = {
-  UploadFile({ file }) {
+  UploadFile({ file, slug }) {
+    if (typeof window === 'undefined') {
+      return Promise.resolve({ file_url: '' });
+    }
+    if (process.env.NODE_ENV === 'development') {
+      return uploadFileViaAPI(file, slug).then((file_url) => ({ file_url }));
+    }
     const url = URL.createObjectURL(file);
     return Promise.resolve({ file_url: url });
   },

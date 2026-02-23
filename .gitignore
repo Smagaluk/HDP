@@ -28,3 +28,17 @@ dist-ssr
 *.sw?
 
 .env
+
+# testing
+/coverage
+/vitest-test-results
+
+# next.js
+/.next/
+/out/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*

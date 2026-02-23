@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "name": "Factory Yards - North Commercial",
+    "slug": "FYNC",
+    "location": "Grand Rapids, MI",
+    "status": "In Development",
+    "project_type": "Commercial",
+    "overview": "Factory Yards North Commercial is a modern commercial development within the larger Factory Yards complex.",
+    "investment_thesis": "This development capitalizes on strong demand for quality commercial space in the Grand Rapids market.",
+    "highlights": [
+      "Modern commercial design",
+      "Flexible space configurations",
+      "Part of the larger Factory Yards development",
+      "Strategic Grand Rapids location",
+      "High-quality construction and finishes"
+    ],
+    "square_feet": "TBD",
+    "units": "N/A",
+    "featured": false,
+    "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "gallery_images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Factory Yards",
+    "slug": "factory-yards",
+    "location": "Grand Rapids, MI",
+    "status": "In Development",
+    "project_type": "Mixed-Use",
+    "overview": "Large-scale mixed-use redevelopment with adaptive reuse and ground-up components.",
+    "investment_thesis": "The project capitalizes on Grand Rapids' growing demand for urban living combined with the city's strong preservation incentives.",
+    "highlights": [
+      "Historic industrial complex transformation",
+      "Mixed-use program with residential, retail, and office",
+      "Complex capital stack utilizing multiple incentive programs",
+      "Public-private partnership structure",
+      "Phased development approach reducing execution risk"
+    ],
+    "square_feet": "450,000 SF",
+    "units": "280 residential units",
+    "featured": true,
+    "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+    "gallery_images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "The Amo",
+    "slug": "the-amo",
+    "location": "Detroit, MI",
+    "status": "Stabilized",
+    "project_type": "Multifamily",
+    "overview": "Value-add multifamily repositioning project focused on operational excellence.",
+    "investment_thesis": "Detroit's multifamily market presents compelling value-add opportunities as the city's revitalization continues.",
+    "highlights": [
+      "Value-add acquisition with below-market rents",
+      "Comprehensive renovation program",
+      "Operational improvements driving NOI growth",
+      "Strong submarket with limited new supply",
+      "Proximity to major employers and amenities"
+    ],
+    "square_feet": "125,000 SF",
+    "units": "142 units",
+    "featured": true,
+    "image_url": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=80",
+    "gallery_images": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=80",
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Trinity Health Grand Rapids",
+    "slug": "trinity-health-gr",
+    "location": "Grand Rapids, MI",
+    "status": "Planning",
+    "project_type": "Mixed-Use",
+    "overview": "Early-stage mixed-use development partnership evaluating feasibility.",
+    "investment_thesis": "Healthcare-anchored developments benefit from stable, creditworthy tenants and community support.",
+    "highlights": [
+      "Healthcare system partnership",
+      "Early-stage feasibility analysis",
+      "Community stakeholder engagement",
+      "Mixed-use program evaluation",
+      "Long-term ground lease structure under consideration"
+    ],
+    "square_feet": "TBD",
+    "units": "TBD",
+    "featured": true,
+    "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "gallery_images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"
+    ]
+  }
+]
