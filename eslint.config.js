@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginUnusedImports from "eslint-plugin-unused-imports";
+import nextPlugin from "@next/eslint-plugin-next";
 
 export default [
   {
@@ -34,8 +35,11 @@ export default [
       react: pluginReact,
       "react-hooks": pluginReactHooks,
       "unused-imports": pluginUnusedImports,
+      "@next/next": nextPlugin,
     },
     rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules,
       "no-unused-vars": "off",
       "react/jsx-uses-vars": "error",
       "react/jsx-uses-react": "error",

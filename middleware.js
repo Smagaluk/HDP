@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
+  const { pathname } = request.nextUrl;
+
   const vercelEnv = process.env.VERCEL_ENV;
   const isProdDeployment =
     vercelEnv === 'production' || (!vercelEnv && process.env.NODE_ENV === 'production');
@@ -8,7 +10,6 @@ export function middleware(request) {
   if (!isProdDeployment) {
     return NextResponse.next();
   }
-  const { pathname } = request.nextUrl;
   if (pathname === '/manage-projects') {
     return NextResponse.json({ error: 'Not Found' }, { status: 404 });
   }
@@ -22,5 +23,9 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/manage-projects', '/api/projects', '/api/admin/upload'],
+  matcher: [
+    '/manage-projects',
+    '/api/projects',
+    '/api/admin/upload',
+  ],
 };
