@@ -16,13 +16,7 @@ const navLinks = [
       { name: 'Contact', page: 'Contact' }
     ]
   },
-  { 
-    name: 'Projects', 
-    page: 'Projects',
-    submenu: [
-      { name: 'Manage Projects', page: 'ManageProjects' }
-    ]
-  },
+  { name: 'Projects', page: 'Projects' },
   { name: 'Capabilities', page: 'Capabilities' },
   { name: 'Investors', page: 'Investors' },
 ];
