@@ -7,12 +7,18 @@ project_type: Mixed-Use
 featured: true
 square_feet: '450,000 SF'
 units: 280 residential units
-image_url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80'
+image_url: '/website-assets/Project Images/FYMU/Site Overview-1.jpg'
 gallery_images:
-  - 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80'
-  - 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
-  - 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80'
-  - 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'
+  - '/website-assets/Project Images/FYMU/Site Overview-1.jpg'
+  - '/website-assets/Project Images/FYMU/Five Story-1.jpg'
+  - '/website-assets/Project Images/FYMU/The Docks-1.jpg'
+  - '/website-assets/Project Images/FYMU/Docks Office Render Final.jpg'
+  - '/website-assets/Project Images/FYMU/The Shops V2 - Draft.jpg'
+  - '/website-assets/Project Images/FYMU/Plaza 1.jpg'
+  - '/website-assets/Project Images/FYMU/Plaza 2.jpg'
+  - '/website-assets/Project Images/FYMU/Plaza 3.jpg'
+  - '/website-assets/Project Images/FYMU/Plaza 4.jpg'
+  - '/website-assets/Project Images/FYMU/Plaza Winter-1.jpg'
 overview: >-
   Large-scale mixed-use redevelopment with adaptive reuse and ground-up
   components.

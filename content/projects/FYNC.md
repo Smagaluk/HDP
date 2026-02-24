@@ -2,16 +2,19 @@
 name: Factory Yards - North Commercial
 slug: FYNC
 location: 'Grand Rapids, MI'
-status: In Development
+status: Under Construction
 project_type: Commercial
 featured: true
 square_feet: '22,400 sqft'
 units: N/A
-image_url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'
+image_url: /website-assets/Project Images/FYNC/FYNC_3.png
 gallery_images:
-  - 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'
-  - 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
-  - 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80'
+  - /website-assets/Project Images/FYNC/FYNC_1.png
+  - /website-assets/Project Images/FYNC/FYNC_2.png
+  - /website-assets/Project Images/FYNC/FYNC_3.png
+  - /website-assets/Project Images/FYNC/FYNC_4.png
+  - /website-assets/Project Images/FYNC/FYNC_5.png
+  - /website-assets/Project Images/FYNC/FYNC_6.png
 overview: >-
   Factory Yards North Commercial is a modern commercial development within the
   larger Factory Yards complex.

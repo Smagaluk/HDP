@@ -12,7 +12,7 @@ const leadership = [
   {
     name: 'Ben Smith',
     title: 'Managing Partner',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
+    image: '/website-assets/Other Images/Ben Smith_headshot.jpg',
     bio: [
       'Ben is an experienced real estate professional with over 20 years of diverse experience across many areas of the industry. Prior to joining Heritage Development Partners, Ben spent time as a principal with an investment firm focused on syndications for value-add multifamily investments, and previously was a partner with a large Midwest-based real estate investment advisory and asset management firm, helping to oversee over $1 billion in investments on behalf of institutional and family office/high net worth clients.',
       "Ben's expertise includes deep experience in deal structuring, financial underwriting, and creative capital stack creation. Ben also has extensive experience in the full lifecycle of the real estate development process from acquisition, design, and entitlement through project completion.",
@@ -22,7 +22,7 @@ const leadership = [
   {
     name: 'Scott Magaluk',
     title: 'Managing Partner',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    image: '/website-assets/Other Images/Scott MagalukHeadshot_8821.jpg',
     bio: [
       'Scott possesses over eight years of expertise in the commercial real estate sector, having successfully sourced, developed, and managed assets totaling $45M. His comprehensive experience spans construction management, asset management, and fostering robust investor relations.',
       'Before joining Heritage Development Partners, Scott was instrumental in the development of over 75,000 square feet of historic adaptive reuse projects in Baltimore, MD, through his association with Urban Scene Development. He specialized in leveraging project incentives, notably federal and state historic tax credits as well as new markets tax credits.',
