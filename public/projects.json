@@ -1,6 +1,26 @@
 [
   {
     "id": 1,
+    "name": "19 Central",
+    "slug": "19central",
+    "location": "Cambridge, MA",
+    "status": "Completed",
+    "project_type": "Multifamily",
+    "overview": "",
+    "investment_thesis": "",
+    "highlights": [],
+    "square_feet": "32,000 sqft",
+    "units": "30",
+    "featured": false,
+    "image_url": "/website-assets/Project Images/19 Central/213_Somerville (4).jpg",
+    "gallery_images": [
+      "/website-assets/Project Images/19 Central/213_Somerville (4).jpg",
+      "/website-assets/Project Images/19 Central/360_Somerville (11).jpg",
+      "/website-assets/Project Images/19 Central/821_Somerville (21).jpg"
+    ]
+  },
+  {
+    "id": 2,
     "name": "Factory Yards - Ground up",
     "slug": "FYGU",
     "location": "Grand Rapids, MI",
@@ -16,11 +36,11 @@
     "gallery_images": []
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Factory Yards - North Commercial",
     "slug": "FYNC",
     "location": "Grand Rapids, MI",
-    "status": "In Development",
+    "status": "Under Construction",
     "project_type": "Commercial",
     "overview": "Factory Yards North Commercial is a modern commercial development within the larger Factory Yards complex.",
     "investment_thesis": "This development capitalizes on strong demand for quality commercial space in the Grand Rapids market.",
@@ -34,7 +54,7 @@
     "square_feet": "22,400 sqft",
     "units": "N/A",
     "featured": true,
-    "image_url": "/website-assets/Project Images/FYNC/FYNC_1.png",
+    "image_url": "/website-assets/Project Images/FYNC/FYNC_3.png",
     "gallery_images": [
       "/website-assets/Project Images/FYNC/FYNC_1.png",
       "/website-assets/Project Images/FYNC/FYNC_2.png",
@@ -45,7 +65,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Factory Yards - South Commercial",
     "slug": "FYSC",
     "location": "Grand Rapids, MI",
@@ -66,7 +86,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "38 Gibson",
     "slug": "Gibson",
     "location": "Cambridge, MA",
@@ -78,7 +98,7 @@
     "square_feet": "",
     "units": "",
     "featured": false,
-    "image_url": "/website-assets/Project Images/Gibson/20211001_124517.jpg",
+    "image_url": "/website-assets/Project Images/Gibson/016_Cambridge (14).jpg",
     "gallery_images": [
       "/website-assets/Project Images/Gibson/20211001_124517.jpg",
       "/website-assets/Project Images/Gibson/016_Cambridge (14).jpg",
@@ -88,7 +108,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Factory Yards - Mixed Use",
     "slug": "factory-yards",
     "location": "Grand Rapids, MI",
@@ -121,7 +141,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "The Amo",
     "slug": "the-amo",
     "location": "Detroit, MI",
@@ -149,7 +169,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Trinity Health Grand Rapids",
     "slug": "trinity-health-gr",
     "location": "Grand Rapids, MI",

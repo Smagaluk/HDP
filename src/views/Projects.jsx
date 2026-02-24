@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '@/api/client';
 import Link from 'next/link';
@@ -9,37 +9,45 @@ import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, MapPin } from 'lucide-react';
 
+function parseSquareFeet(value) {
+  if (value == null || value === '') return 0;
+  if (typeof value === 'number' && Number.isFinite(value)) return value;
+  if (typeof value !== 'string') return 0;
+  const cleaned = value.replace(/[^0-9.]/g, '');
+  const n = parseFloat(cleaned);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function AnimatedTotalSqFt({ total, durationMs = 1000 }) {
+  const [display, setDisplay] = useState(0);
+  useEffect(() => {
+    if (total <= 0) {
+      setDisplay(0);
+      return;
+    }
+    let startTime = null;
+    function tick(timestamp) {
+      if (startTime == null) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const t = Math.min(elapsed / durationMs, 1);
+      const easeOut = 1 - (1 - t) ** 3;
+      setDisplay(Math.round(easeOut * total));
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }, [total, durationMs]);
+  return <>{display.toLocaleString()}</>;
+}
+
 const defaultProjects = [
-  {
-    id: 1,
-    name: 'Factory Yards',
-    slug: 'factory-yards',
-    location: 'Grand Rapids, MI',
-    status: 'In Development',
-    project_type: 'Mixed-Use',
-    overview: 'Large-scale mixed-use redevelopment with adaptive reuse and ground-up components.',
-    image_url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'The Amo',
-    slug: 'the-amo',
-    location: 'Detroit, MI',
-    status: 'Stabilized',
-    project_type: 'Multifamily',
-    overview: 'Value-add multifamily repositioning project focused on operational excellence.',
-    image_url: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Trinity Health Grand Rapids',
-    slug: 'trinity-health-gr',
-    location: 'Grand Rapids, MI',
-    status: 'Planning',
-    project_type: 'Mixed-Use',
-    overview: 'Early-stage mixed-use development partnership evaluating feasibility.',
-    image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-  },
+  { id: 1, name: '19 Central', slug: '19central', location: 'Cambridge, MA', status: 'Completed', project_type: 'Multifamily', square_feet: '32,000 sqft', image_url: '/website-assets/Project Images/19 Central/213_Somerville (4).jpg' },
+  { id: 2, name: 'Factory Yards - Ground up', slug: 'FYGU', location: 'Grand Rapids, MI', status: 'Planning', project_type: 'Multifamily', square_feet: '84000', image_url: '' },
+  { id: 3, name: 'Factory Yards - North Commercial', slug: 'FYNC', location: 'Grand Rapids, MI', status: 'Under Construction', project_type: 'Commercial', square_feet: '22,400 sqft', image_url: '/website-assets/Project Images/FYNC/FYNC_3.png' },
+  { id: 4, name: 'Factory Yards - South Commercial', slug: 'FYSC', location: 'Grand Rapids, MI', status: 'Planning', project_type: 'Commercial', square_feet: '67,000 sqft', image_url: '/website-assets/Project Images/FYSC/East Elevation.jpg' },
+  { id: 5, name: '38 Gibson', slug: 'Gibson', location: 'Cambridge, MA', status: 'Completed', project_type: 'Multifamily', square_feet: '', image_url: '/website-assets/Project Images/Gibson/016_Cambridge (14).jpg' },
+  { id: 6, name: 'Factory Yards - Mixed Use', slug: 'factory-yards', location: 'Grand Rapids, MI', status: 'In Development', project_type: 'Mixed-Use', square_feet: '450,000 SF', image_url: '/website-assets/Project Images/FYMU/Site Overview-1.jpg' },
+  { id: 7, name: 'The Amo', slug: 'the-amo', location: 'Detroit, MI', status: 'Stabilized', project_type: 'Multifamily', square_feet: '125,000 SF', image_url: '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI.JPG' },
+  { id: 8, name: 'Trinity Health Grand Rapids', slug: 'trinity-health-gr', location: 'Grand Rapids, MI', status: 'Planning', project_type: 'Mixed-Use', square_feet: 'TBD', image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80' },
 ];
 
 const statusFilters = ['All', 'Planning', 'In Development', 'Under Construction', 'Stabilized', 'Completed'];
@@ -54,6 +62,10 @@ export default function Projects() {
   });
 
   const displayProjects = projects?.length > 0 ? projects : defaultProjects;
+
+  const totalSqFt = useMemo(() => {
+    return displayProjects.reduce((sum, p) => sum + parseSquareFeet(p.square_feet ?? ''), 0);
+  }, [displayProjects]);
   
   const filteredProjects = activeFilter === 'All' 
     ? displayProjects 
@@ -64,23 +76,49 @@ export default function Projects() {
       {/* Hero */}
       <section className="py-20 lg:py-28 bg-[#F3F2ED]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <p className="text-xs font-semibold tracking-widest uppercase text-[#1B2944] mb-6">
-              Our Portfolio
-            </p>
-            <h1 className="text-4xl lg:text-5xl font-medium text-[#070707] tracking-tight leading-tight">
-              Projects that create lasting value.
-            </h1>
-            <p className="mt-6 text-lg text-[#474E5E] leading-relaxed">
-              From adaptive reuse of historic buildings to ground-up mixed-use development, 
-              our portfolio reflects a disciplined approach to creating quality places.
-            </p>
-          </motion.div>
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-xs font-semibold tracking-widest uppercase text-[#1B2944] mb-6">
+                Our Portfolio
+              </p>
+              <h1 className="text-4xl lg:text-5xl font-medium text-[#070707] tracking-tight leading-tight">
+                Projects that create lasting value.
+              </h1>
+            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-start mt-6">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-lg text-[#474E5E] leading-relaxed max-w-3xl lg:col-span-7"
+              >
+                From adaptive reuse of historic buildings to ground-up mixed-use development, 
+                our portfolio reflects a disciplined approach to creating quality places.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-10 lg:mt-0 lg:col-span-5 lg:flex lg:justify-end lg:items-center"
+              >
+                <div className="text-left lg:text-right">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-[#1B2944] mb-2">
+                    Portfolio total
+                  </p>
+                  <p className="text-4xl lg:text-5xl font-medium text-[#070707] tracking-tight">
+                    <AnimatedTotalSqFt total={totalSqFt} durationMs={1000} />
+                    <span className="text-2xl lg:text-3xl font-normal text-[#474E5E] ml-1">
+                      sq ft
+                    </span>
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -139,10 +177,7 @@ export default function Projects() {
                       <h3 className="text-2xl font-medium text-[#070707] group-hover:text-[#1B2944] transition-colors">
                         {project.name}
                       </h3>
-                      <p className="mt-2 text-[#474E5E] leading-relaxed">
-                        {project.overview}
-                      </p>
-                      <div className="mt-4 flex items-center gap-3">
+                      <div className="mt-3 flex items-center gap-3">
                         <span className="px-3 py-1 text-xs font-medium bg-[#F3F2ED] text-[#474E5E]">
                           {project.project_type}
                         </span>

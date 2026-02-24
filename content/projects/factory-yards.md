@@ -20,16 +20,25 @@ gallery_images:
   - '/website-assets/Project Images/FYMU/Plaza 4.jpg'
   - '/website-assets/Project Images/FYMU/Plaza Winter-1.jpg'
 overview: >-
-  Large-scale mixed-use redevelopment with adaptive reuse and ground-up
-  components.
+  Factory Yards Mixed Use is a large-scale adaptive reuse and ground-up
+  redevelopment transforming a historic industrial campus into a vibrant
+  mixed-use district. The project combines residential, commercial, and
+  public realm components designed to create a durable, walkable
+  neighborhood that honors the site’s industrial heritage while supporting
+  long-term community growth.
+
 investment_thesis: >-
-  The project capitalizes on Grand Rapids' growing demand for urban living
-  combined with the city's strong preservation incentives.
+  Positioned to benefit from Grand Rapids’ continued urban growth, the
+  project leverages historic preservation incentives, strong housing
+  fundamentals, and disciplined phased execution to create stable cash
+  flow potential and long-term asset appreciation within a revitalizing
+  urban corridor.
+
 highlights:
-  - Historic industrial complex transformation
-  - 'Mixed-use program with residential, retail, and office'
-  - Complex capital stack utilizing multiple incentive programs
-  - Public-private partnership structure
-  - Phased development approach reducing execution risk
+  - Transformational redevelopment of historic industrial complex
+  - Mixed-use program including residential, retail, and commercial space
+  - Multi-layered capital stack utilizing public and private incentives
+  - Public-private partnership supporting district revitalization
+  - Phased development strategy reducing execution and market risk
 ---
 
