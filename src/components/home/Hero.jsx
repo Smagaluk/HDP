@@ -66,7 +66,7 @@ export default function Hero() {
           >
             <div className="aspect-[4/5] bg-stone-200 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+                src="/website-assets/Other Images/Home Page image.JPG"
                 alt="Historic brick factory adaptive reuse building"
                 width={800}
                 height={600}
