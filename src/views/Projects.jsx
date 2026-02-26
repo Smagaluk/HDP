@@ -18,6 +18,14 @@ function parseSquareFeet(value) {
   return Number.isFinite(n) ? n : 0;
 }
 
+function parseUnits(value) {
+  if (value == null || value === '') return 0;
+  if (typeof value === 'number' && Number.isInteger(value)) return value;
+  if (typeof value !== 'string') return 0;
+  const match = value.match(/(\d+)/);
+  return match ? parseInt(match[1], 10) : 0;
+}
+
 function AnimatedTotalSqFt({ total, durationMs = 1000 }) {
   const [display, setDisplay] = useState(0);
   useEffect(() => {
@@ -64,6 +72,10 @@ export default function Projects() {
 
   const totalSqFt = useMemo(() => {
     return displayProjects.reduce((sum, p) => sum + parseSquareFeet(p.square_feet ?? ''), 0);
+  }, [displayProjects]);
+
+  const totalUnits = useMemo(() => {
+    return displayProjects.reduce((sum, p) => sum + parseUnits(p.units ?? ''), 0);
   }, [displayProjects]);
   
   const filteredProjects = activeFilter === 'All' 
@@ -112,6 +124,12 @@ export default function Projects() {
                     <AnimatedTotalSqFt total={totalSqFt} durationMs={1000} />
                     <span className="text-2xl lg:text-3xl font-normal text-[#474E5E] ml-1">
                       sq ft
+                    </span>
+                  </p>
+                  <p className="text-4xl lg:text-5xl font-medium text-[#070707] tracking-tight mt-2">
+                    <AnimatedTotalSqFt total={totalUnits} durationMs={1000} />
+                    <span className="text-2xl lg:text-3xl font-normal text-[#474E5E] ml-1">
+                      Units
                     </span>
                   </p>
                 </div>

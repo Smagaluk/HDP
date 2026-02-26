@@ -1,5 +1,5 @@
 ---
-name: GR - Build-to-Suit
+name: Grand Rapids - Build-to-Suit
 slug: FYNC
 location: 'Grand Rapids, MI'
 status: Under Construction
