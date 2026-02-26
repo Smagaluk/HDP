@@ -12,13 +12,15 @@ const navLinks = [
     name: 'About', 
     page: 'About',
     submenu: [
+      { name: 'About Us', page: 'About' },
       { name: 'Team', page: 'Team' },
-      { name: 'Contact', page: 'Contact' }
+      { name: 'Investment Strategy', page: 'InvestmentStrategy' }
     ]
   },
   { name: 'Projects', page: 'Projects' },
   { name: 'Capabilities', page: 'Capabilities' },
   { name: 'Investors', page: 'Investors' },
+  { name: 'Contact', page: 'Contact' }
 ];
 
 export default function Header() {

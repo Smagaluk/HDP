@@ -52,7 +52,7 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-3 text-sm text-[#F3F2ED]/70">
-              <p>info@heritagedevpartners.com</p>
+              <p>info@hrtgdev.com</p>
               <p>Michigan</p>
             </div>
           </div>

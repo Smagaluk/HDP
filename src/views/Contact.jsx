@@ -201,10 +201,10 @@ export default function Contact() {
                       <div>
                         <p className="text-xs text-[#474E5E] uppercase tracking-wide mb-1">Email</p>
                         <a 
-                          href="mailto:info@heritagedevpartners.com"
+                          href="mailto:info@hrtgdev.com"
                           className="text-[#070707] hover:text-[#1B2944] transition-colors"
                         >
-                          info@heritagedevpartners.com
+                          info@hrtgdev.com
                         </a>
                       </div>
                     </div>

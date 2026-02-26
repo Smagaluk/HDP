@@ -100,15 +100,14 @@ export default function Projects() {
                 Projects that create lasting value.
               </h1>
             </motion.div>
-            <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-start mt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-end mt-6">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-lg text-[#474E5E] leading-relaxed max-w-3xl lg:col-span-7"
               >
-                From adaptive reuse of historic buildings to ground-up mixed-use development, 
-                our portfolio reflects a disciplined approach to creating quality places.
+                Heritage Development Partners pursues thoughtfully structured real estate investments spanning adaptive reuse, mixed-use development, and strategically positioned multifamily assets in markets we know deeply. We focus on projects where disciplined underwriting, strong fundamentals, and sophisticated capital structuring — including incentives, tax credits, and creative financing — can unlock durable long-term value. Our selective approach prioritizes downside protection, stakeholder alignment, and execution strategies that support resilient, community-enhancing places.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

@@ -203,7 +203,7 @@ export default function Investors() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <p className="mt-4 text-sm text-[#F3F2ED]/60">
-                info@heritagedevpartners.com
+                info@hrtgdev.com
               </p>
             </div>
           </motion.div>

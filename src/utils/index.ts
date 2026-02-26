@@ -5,6 +5,7 @@ const ROUTE_MAP = {
   Home: "/",
   About: "/about",
   Team: "/about/team",
+  InvestmentStrategy: "/about/investment-strategy",
   Contact: "/contact",
   Projects: "/projects",
   Capabilities: "/capabilities",
