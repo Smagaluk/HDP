@@ -253,7 +253,7 @@ export default function Contact() {
             </p>
             <div className="aspect-[21/9] bg-stone-200 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
+                src="/website-assets/Other Images/Home Page image.JPG"
                 alt="Michigan landscape"
                 width={1200}
                 height={600}

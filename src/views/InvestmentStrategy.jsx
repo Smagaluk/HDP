@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { createPageUrl } from '@/utils';
-import { ArrowRight, MapPin, Layers, Landmark, HandHelping, Shield } from 'lucide-react';
+import { ArrowRight, MapPin, Layers, Landmark, HandHelping, Shield, ShieldCheck } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const pillars = [
@@ -22,7 +22,7 @@ const pillars = [
   {
     icon: Landmark,
     title: 'Capital Discipline',
-    description: 'Thoughtfully structured capital stacks utilizing tax credits, incentives, public financing, and conventional debt and equity—paired with conservative leverage and realistic business plans.',
+    description: 'Thoughtfully structured capital stacks utilizing tax credits, incentives, public financing, as well as conventional debt and equity—paired with conservative leverage and realistic business plans.',
   },
   {
     icon: HandHelping,
@@ -33,6 +33,11 @@ const pillars = [
     icon: Shield,
     title: 'Alignment & Transparency',
     description: 'We invest alongside our partners and structure each transaction to ensure alignment of interests. Institutional asset management processes, transparent reporting, and consistent communication are foundational to how we operate and to the long-term relationships we build.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Conservative Underwriting',
+    description: 'Rigorous underwriting that emphasizes downside protection and realistic assumptions. We structure each investment to manage downside risk and hedge against unpredictable market conditions—ensuring durability through economic cycles.',
   },
 ];
 
@@ -90,7 +95,7 @@ export default function InvestmentStrategy() {
             >
               <div className="aspect-[4/3] bg-stone-200 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                  src="/website-assets/Other Images/Home Page image.JPG"
                   alt="Commercial real estate development"
                   width={800}
                   height={600}

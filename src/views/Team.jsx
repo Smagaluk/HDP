@@ -35,19 +35,19 @@ const advisors = [
   {
     name: 'Advisor One',
     title: 'Capital Markets',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80',
+    image: '/website-assets/Other Images/Ben Smith_headshot.jpg',
     bio: 'Seasoned professional with expertise in institutional capital formation and structured finance for real estate development.',
   },
   {
     name: 'Advisor Two',
     title: 'Development & Entitlements',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80',
+    image: '/website-assets/Other Images/Scott MagalukHeadshot_8821.jpg',
     bio: 'Extensive background in land use planning, entitlements, and navigating complex municipal approval processes.',
   },
   {
     name: 'Advisor Three',
     title: 'Construction & Operations',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80',
+    image: '/website-assets/Other Images/Ben Smith_headshot.jpg',
     bio: 'Deep experience in construction management and asset operations across multifamily and mixed-use portfolios.',
   },
 ];

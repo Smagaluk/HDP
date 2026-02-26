@@ -63,7 +63,7 @@ export default function About() {
             >
               <div className="aspect-[4/3] bg-stone-200 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+                  src="/website-assets/Other Images/Home Page image.JPG"
                   alt="Heritage Development Partners office"
                   width={800}
                   height={600}

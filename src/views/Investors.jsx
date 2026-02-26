@@ -89,7 +89,7 @@ export default function Investors() {
             >
               <div className="aspect-[4/3] bg-stone-200 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80"
+                  src="/website-assets/Other Images/Home Page image.JPG"
                   alt="Real estate investment"
                   width={800}
                   height={600}
