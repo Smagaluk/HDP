@@ -15,7 +15,7 @@ const capabilities = [
     items: [
       {
         title: 'Ground-Up Development',
-        description: 'New construction across multifamily, mixed-use, and commercial asset classes, with a focus on quality design and efficient execution.'
+        description: 'New construction across multifamily, mixed-use, and commercial asset classes, with a focus on quality design and efficient execution with the end user in mind.'
       },
       {
         title: 'Adaptive Reuse',
