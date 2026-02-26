@@ -7,12 +7,12 @@ project_type: Commercial
 featured: false
 square_feet: '67,000 sqft'
 units: ''
-image_url: '/website-assets/Project Images/FYSC/East Elevation.jpg'
+year: '2026'
+image_url: '/website-assets/Project Images/FYSC/FYSC1.jpg'
 gallery_images:
-  - '/website-assets/Project Images/FYSC/East Elevation.jpg'
-  - '/website-assets/Project Images/FYSC/Storehouse Entry.jpg'
-  - '/website-assets/Project Images/FYSC/HIghbay 1.jpg'
-  - '/website-assets/Project Images/FYSC/SE elevation.jpg'
+  - '/website-assets/Project Images/FYSC/FYSC1.jpg'
+  - '/website-assets/Project Images/FYSC/FYSC2.jpg'
+  - '/website-assets/Project Images/FYSC/FYSC3.jpg'
 overview: >-
   Factory Yards South Commercial reimagines a former 67,000-square-foot
   industrial building within the broader Factory Yards redevelopment,

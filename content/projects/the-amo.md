@@ -5,15 +5,16 @@ location: 'Detroit, MI'
 status: Stabilized
 project_type: Multifamily
 featured: true
-square_feet: '125,000 SF'
-units: 142 units
-image_url: '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI.JPG'
+square_feet: '68,500 sqft'
+units: '67 units'
+year: '2025'
+image_url: '/website-assets/Project Images/The Amo/Amo1.JPG'
 gallery_images:
-  - '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI.JPG'
-  - '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-6.JPG'
-  - '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-9.JPG'
-  - '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-20.JPG'
-  - '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-46.JPG'
+  - '/website-assets/Project Images/The Amo/Amo1.JPG'
+  - '/website-assets/Project Images/The Amo/amo2.JPG'
+  - '/website-assets/Project Images/The Amo/amo3.JPG'
+  - '/website-assets/Project Images/The Amo/amo4.JPG'
+  - '/website-assets/Project Images/The Amo/amo5.JPG'
 overview: Value-add multifamily repositioning project focused on operational excellence.
 investment_thesis: >-
   Detroit's multifamily market presents compelling value-add opportunities as

@@ -25,6 +25,7 @@ function projectFromFile(filePath) {
     highlights: Array.isArray(data.highlights) ? data.highlights : [],
     square_feet: data.square_feet ?? '',
     units: data.units ?? '',
+    year: data.year ?? '',
     featured: Boolean(data.featured),
     image_url: data.image_url ?? '',
     gallery_images: Array.isArray(data.gallery_images) ? data.gallery_images : [],
@@ -45,9 +46,18 @@ export function loadProjectsFromJson() {
   return JSON.parse(raw);
 }
 
+function sortByYear(projects) {
+  return [...projects].sort((a, b) => {
+    const ya = parseInt(a.year, 10) || 0;
+    const yb = parseInt(b.year, 10) || 0;
+    return yb - ya;
+  });
+}
+
 export function getProjects() {
-  if (process.env.NODE_ENV === 'development' && fs.existsSync(contentDir)) {
-    return loadProjectsFromMarkdown();
-  }
-  return loadProjectsFromJson();
+  const projects =
+    process.env.NODE_ENV === 'development' && fs.existsSync(contentDir)
+      ? loadProjectsFromMarkdown()
+      : loadProjectsFromJson();
+  return sortByYear(projects);
 }

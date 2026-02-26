@@ -30,6 +30,7 @@ function projectFromFile(filePath) {
     highlights: Array.isArray(data.highlights) ? data.highlights : [],
     square_feet: data.square_feet ?? '',
     units: data.units ?? '',
+    year: data.year ?? '',
     featured: Boolean(data.featured),
     image_url: data.image_url ?? '',
     gallery_images: Array.isArray(data.gallery_images) ? data.gallery_images : [],
@@ -49,7 +50,13 @@ function build() {
   const projects = files
     .map((f) => path.join(contentDir, f))
     .map(projectFromFile)
-    .map((p, i) => ({ id: i + 1, ...p }));
+    .map((p, i) => ({ id: i + 1, ...p }))
+    .sort((a, b) => {
+      const ya = parseInt(a.year, 10) || 0;
+      const yb = parseInt(b.year, 10) || 0;
+      return yb - ya;
+    })
+    .map((p, i) => ({ ...p, id: i + 1 }));
 
   const outDir = path.dirname(outPath);
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });

@@ -10,7 +10,11 @@ async function fetchProjects() {
 const Project = {
   async list() {
     const projects = await fetchProjects();
-    return [...projects].sort((a, b) => (a.id || 0) - (b.id || 0));
+    return [...projects].sort((a, b) => {
+      const ya = parseInt(a.year, 10) || 0;
+      const yb = parseInt(b.year, 10) || 0;
+      return yb - ya;
+    });
   },
   async create(data = {}) {
     const res = await fetch('/api/projects', {

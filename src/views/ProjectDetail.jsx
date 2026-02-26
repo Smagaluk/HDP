@@ -239,6 +239,13 @@ export default function ProjectDetail({ slug: slugProp }) {
                         <p className="text-[#070707] font-medium">{project.units}</p>
                       </div>
                     )}
+
+                    {project.year && (
+                      <div>
+                        <p className="text-xs text-[#474E5E] uppercase tracking-wide mb-1">Year</p>
+                        <p className="text-[#070707] font-medium">{project.year}</p>
+                      </div>
+                    )}
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-[#474E5E]/20">

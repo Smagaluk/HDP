@@ -4,16 +4,17 @@ slug: Gibson
 location: 'Cambridge, MA'
 status: Completed
 project_type: Multifamily
-featured: false
-square_feet: ''
-units: ''
-image_url: /website-assets/Project Images/Gibson/016_Cambridge (14).jpg
+featured: true
+square_feet: '16,000 sqft'
+units: '18 Units'
+year: '2017'
+image_url: '/website-assets/Project Images/Gibson/Gib1.jpg'
 gallery_images:
-  - /website-assets/Project Images/Gibson/20211001_124517.jpg
-  - /website-assets/Project Images/Gibson/016_Cambridge (14).jpg
-  - /website-assets/Project Images/Gibson/155_Cambridge (5)1.jpg
-  - /website-assets/Project Images/Gibson/532_Cambridge (26).jpg
-  - /website-assets/Project Images/Gibson/018-img_014.jpg
+  - '/website-assets/Project Images/Gibson/Gib1.jpg'
+  - '/website-assets/Project Images/Gibson/Gib2.jpg'
+  - '/website-assets/Project Images/Gibson/Gib3.jpg'
+  - '/website-assets/Project Images/Gibson/Gib4.jpg'
+  - '/website-assets/Project Images/Gibson/Gib5.jpg'
 overview: >-
   Gibson Terrace is located on a picturesque tree-lined street steps from
   Harvard Square. Nearly a century old, the property has housed generations
@@ -34,4 +35,3 @@ highlights:
   - Tech-enabled property management implementation
   - Long-term stewardship approach in a supply-constrained market
 ---
-

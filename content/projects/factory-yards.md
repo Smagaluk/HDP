@@ -5,20 +5,20 @@ location: 'Grand Rapids, MI'
 status: In Development
 project_type: Mixed-Use
 featured: true
-square_feet: '450,000 SF'
+square_feet: '450,000 sqft'
+year: '2026'
 units: 280 residential units
-image_url: '/website-assets/Project Images/FYMU/Site Overview-1.jpg'
+image_url: '/website-assets/Project Images/FYMU/FYMU1.jpg'
 gallery_images:
-  - '/website-assets/Project Images/FYMU/Site Overview-1.jpg'
-  - '/website-assets/Project Images/FYMU/Five Story-1.jpg'
-  - '/website-assets/Project Images/FYMU/The Docks-1.jpg'
-  - '/website-assets/Project Images/FYMU/Docks Office Render Final.jpg'
-  - '/website-assets/Project Images/FYMU/The Shops V2 - Draft.jpg'
-  - '/website-assets/Project Images/FYMU/Plaza 1.jpg'
-  - '/website-assets/Project Images/FYMU/Plaza 2.jpg'
-  - '/website-assets/Project Images/FYMU/Plaza 3.jpg'
-  - '/website-assets/Project Images/FYMU/Plaza 4.jpg'
-  - '/website-assets/Project Images/FYMU/Plaza Winter-1.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU1.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU2.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU3.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU4.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU5.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU6.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU7.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU8.jpg'
+  - '/website-assets/Project Images/FYMU/FYMU9.jpg'
 overview: >-
   Factory Yards Mixed Use is a large-scale adaptive reuse and ground-up
   redevelopment transforming a historic industrial campus into a vibrant
