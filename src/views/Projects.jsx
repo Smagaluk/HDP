@@ -47,7 +47,6 @@ const defaultProjects = [
   { id: 5, name: '38 Gibson', slug: 'Gibson', location: 'Cambridge, MA', status: 'Completed', project_type: 'Multifamily', square_feet: '', image_url: '/website-assets/Project Images/Gibson/016_Cambridge (14).jpg' },
   { id: 6, name: 'Factory Yards - Mixed Use', slug: 'factory-yards', location: 'Grand Rapids, MI', status: 'In Development', project_type: 'Mixed-Use', square_feet: '450,000 SF', image_url: '/website-assets/Project Images/FYMU/Site Overview-1.jpg' },
   { id: 7, name: 'The Amo', slug: 'the-amo', location: 'Detroit, MI', status: 'Stabilized', project_type: 'Multifamily', square_feet: '125,000 SF', image_url: '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI.JPG' },
-  { id: 8, name: 'Trinity Health Grand Rapids', slug: 'trinity-health-gr', location: 'Grand Rapids, MI', status: 'Planning', project_type: 'Mixed-Use', square_feet: 'TBD', image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80' },
 ];
 
 const statusFilters = ['All', 'Planning', 'In Development', 'Under Construction', 'Stabilized', 'Completed'];

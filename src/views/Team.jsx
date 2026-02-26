@@ -124,7 +124,8 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Advisors / Team Members */}
+      {/* Advisors / Team Members - hidden */}
+      {false && (
       <section className="py-24 lg:py-32 bg-[#F3F2ED]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
@@ -166,6 +167,7 @@ export default function Team() {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA */}
       <section className="py-24 lg:py-32 bg-[#F3F2ED]">

@@ -25,15 +25,6 @@ export default function FeaturedProjects({ projects }) {
       status: 'Stabilized',
       slug: 'the-amo',
       image_url: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=80'
-    },
-    {
-      id: 3,
-      name: 'Trinity Health Grand Rapids',
-      location: 'Grand Rapids, MI',
-      project_type: 'Mixed-Use',
-      status: 'Planning',
-      slug: 'trinity-health-gr',
-      image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
     }
   ];
 

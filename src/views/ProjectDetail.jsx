@@ -65,28 +65,6 @@ const defaultProjects = {
       '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-46.JPG',
     ],
   },
-  'trinity-health-gr': {
-    name: 'Trinity Health Grand Rapids',
-    location: 'Grand Rapids, MI',
-    status: 'Planning',
-    project_type: 'Mixed-Use',
-    overview: 'Trinity Health Grand Rapids is an early-stage mixed-use development opportunity in partnership with one of Michigan\'s largest health systems. The project is currently in the feasibility and stakeholder alignment phase.',
-    investment_thesis: 'Healthcare-anchored developments benefit from stable, creditworthy tenants and community support. This project explores the potential for a mixed-use development that serves both the healthcare system\'s needs and the surrounding community.',
-    highlights: [
-      'Healthcare system partnership',
-      'Early-stage feasibility analysis',
-      'Community stakeholder engagement',
-      'Mixed-use program evaluation',
-      'Long-term ground lease structure under consideration'
-    ],
-    square_feet: 'TBD',
-    units: 'TBD',
-    image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-    gallery_images: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80',
-    ],
-  },
   'FYNC': {
     name: 'Factory Yards - North Commercial',
     location: 'Grand Rapids, MI',

@@ -1,5 +1,5 @@
 ---
-name: Factory Yards - North Commercial
+name: GR - Build-to-Suit
 slug: FYNC
 location: 'Grand Rapids, MI'
 status: Under Construction

@@ -31,13 +31,35 @@ export default function Hero() {
               <p className="text-xs font-semibold tracking-widest uppercase text-[#1B2944] mb-6">
                 Real Estate Investment and Development
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#070707] tracking-tight leading-[1.1]">
-                Building Legacy to create long-term value.
-              </h1>
+              <div className="max-w-xl overflow-hidden" aria-label="Thoughtful development. Disciplined investment. Building Legacy.">
+                <motion.div
+                  className="flex w-max gap-6 md:gap-8 font-semibold text-[#070707] tracking-tight leading-[1.1] text-[1.78rem] md:text-[2.37rem] lg:text-[2.95rem]"
+                  animate={{ x: ['0%', '-50%'] }}
+                  transition={{
+                    x: {
+                      duration: 23.44,
+                      repeat: Infinity,
+                      repeatType: 'loop',
+                      ease: 'linear',
+                    },
+                  }}
+                >
+                  <span>Thoughtful development.</span>
+                  <span>Disciplined investment.</span>
+                  <span>Building Legacy.</span>
+                  <span className="select-none" aria-hidden>Thoughtful development.</span>
+                  <span className="select-none" aria-hidden>Disciplined investment.</span>
+                  <span className="select-none" aria-hidden>Building Legacy.</span>
+                </motion.div>
+              </div>
               <p className="mt-8 text-lg lg:text-xl text-[#474E5E] leading-relaxed max-w-xl">
-                Heritage Development Partners develops and operates mixed-use and 
-                multifamily real estate across Michigan, specializing in adaptive reuse, 
-                complex projects, and thoughtful execution.
+                Heritage Development Partners is a fully integrated real estate
+                investment, development, and management firm focused on
+                multifamily, commercial and mixed-use assets across Michigan and
+                select Midwest markets. We specialize in complex projects and
+                adaptive reuse, combining rigorous underwriting with hands-on
+                execution to create durable, long-term value for our partners and
+                the communities we serve.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link

@@ -415,31 +415,5 @@
       "/website-assets/Project Images/Northend Portfolio/CH5.jpg",
       "/website-assets/Project Images/Northend Portfolio/CH6.jpg"
     ]
-  },
-  {
-    "id": 16,
-    "name": "Trinity Health Grand Rapids",
-    "slug": "trinity-health-gr",
-    "location": "Grand Rapids, MI",
-    "status": "Planning",
-    "project_type": "Mixed-Use",
-    "overview": "Early-stage mixed-use development partnership evaluating feasibility.",
-    "investment_thesis": "Healthcare-anchored developments benefit from stable, creditworthy tenants and community support.",
-    "highlights": [
-      "Healthcare system partnership",
-      "Early-stage feasibility analysis",
-      "Community stakeholder engagement",
-      "Mixed-use program evaluation",
-      "Long-term ground lease structure under consideration"
-    ],
-    "square_feet": "TBD",
-    "units": "TBD",
-    "year": "",
-    "featured": true,
-    "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    "gallery_images": [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"
-    ]
   }
 ]

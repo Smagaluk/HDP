@@ -14,7 +14,7 @@ const capabilities = [
   {
     icon: TrendingUp,
     title: 'Acquisitions',
-    description: 'Value-add multifamily, stabilized assets, and opportunistic investments with disciplined underwriting.',
+    description: 'Stabilized and value-add multifamily and commercial assets, plus select opportunistic investments.',
   },
   {
     icon: Landmark,
@@ -24,7 +24,7 @@ const capabilities = [
   {
     icon: BarChart3,
     title: 'Asset Management',
-    description: 'Operational oversight, performance reporting, and long-term value creation strategies.',
+    description: 'Institutional-grade asset management, performance reporting, and transparent oversight focused on long-term value creation.',
   },
 ];
 
