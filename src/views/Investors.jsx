@@ -68,10 +68,11 @@ export default function Investors() {
                 Building lasting capital relationships.
               </h1>
               <p className="mt-6 text-lg text-[#474E5E] leading-relaxed">
-                We seek partners who share our commitment to disciplined execution, 
-                transparent communication, and long-term value creation. Our platform 
-                offers direct access to Michigan real estate through an experienced 
-                operator with deep local expertise.
+              We seek investors and partners who share our commitment to disciplined execution,
+transparent communication, and long-term value creation. Our platform offers direct
+access to carefully-vetted real estate investment Michigan real estate
+throughopportunities through an experienced operator with deep local expertise and a
+diligent, transparent approach.
               </p>
               <Link
                 href={createPageUrl('Contact')}
@@ -191,7 +192,7 @@ export default function Investors() {
               </h2>
               <p className="mt-6 text-lg text-[#F3F2ED]/80 leading-relaxed">
                 We welcome conversations with potential capital partners interested 
-                in Michigan real estate. Let's discuss how we might work together.
+                in tailored real estate investment opportunities. Let's discuss how we might work together.
               </p>
             </div>
             <div className="lg:text-right">

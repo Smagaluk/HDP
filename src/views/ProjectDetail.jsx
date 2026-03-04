@@ -26,17 +26,18 @@ const defaultProjects = {
     ],
     square_feet: '450,000 SF',
     units: '280 residential units',
-    image_url: '/website-assets/Project Images/FYMU/FYMU1.jpg',
+    image_url: '/website-assets/Project Images/FYMU/Site Overview-1.jpg',
     gallery_images: [
-      '/website-assets/Project Images/FYMU/FYMU1.jpg',
-      '/website-assets/Project Images/FYMU/FYMU2.jpg',
-      '/website-assets/Project Images/FYMU/FYMU3.jpg',
-      '/website-assets/Project Images/FYMU/FYMU4.jpg',
-      '/website-assets/Project Images/FYMU/FYMU5.jpg',
-      '/website-assets/Project Images/FYMU/FYMU6.jpg',
-      '/website-assets/Project Images/FYMU/FYMU7.jpg',
-      '/website-assets/Project Images/FYMU/FYMU8.jpg',
-      '/website-assets/Project Images/FYMU/FYMU9.jpg',
+      '/website-assets/Project Images/FYMU/Site Overview-1.jpg',
+      '/website-assets/Project Images/FYMU/Five Story-1.jpg',
+      '/website-assets/Project Images/FYMU/The Docks-1.jpg',
+      '/website-assets/Project Images/FYMU/Docks Office Render Final.jpg',
+      '/website-assets/Project Images/FYMU/The Shops V2 - Draft.jpg',
+      '/website-assets/Project Images/FYMU/Plaza 1.jpg',
+      '/website-assets/Project Images/FYMU/Plaza 2.jpg',
+      '/website-assets/Project Images/FYMU/Plaza 3.jpg',
+      '/website-assets/Project Images/FYMU/Plaza 4.jpg',
+      '/website-assets/Project Images/FYMU/Plaza Winter-1.jpg',
     ],
   },
   'the-amo': {
@@ -55,13 +56,35 @@ const defaultProjects = {
     ],
     square_feet: '125,000 SF',
     units: '142 units',
-    image_url: '/website-assets/Project Images/The Amo/Amo1.JPG',
+    image_url: '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI.JPG',
     gallery_images: [
-      '/website-assets/Project Images/The Amo/Amo1.JPG',
-      '/website-assets/Project Images/The Amo/amo2.JPG',
-      '/website-assets/Project Images/The Amo/amo3.JPG',
-      '/website-assets/Project Images/The Amo/amo4.JPG',
-      '/website-assets/Project Images/The Amo/amo5.JPG',
+      '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI.JPG',
+      '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-6.JPG',
+      '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-9.JPG',
+      '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-20.JPG',
+      '/website-assets/Project Images/The Amo/66 Adelaide St Detroit MI-46.JPG',
+    ],
+  },
+  'trinity-health-gr': {
+    name: 'Trinity Health Grand Rapids',
+    location: 'Grand Rapids, MI',
+    status: 'Planning',
+    project_type: 'Mixed-Use',
+    overview: 'Trinity Health Grand Rapids is an early-stage mixed-use development opportunity in partnership with one of Michigan\'s largest health systems. The project is currently in the feasibility and stakeholder alignment phase.',
+    investment_thesis: 'Healthcare-anchored developments benefit from stable, creditworthy tenants and community support. This project explores the potential for a mixed-use development that serves both the healthcare system\'s needs and the surrounding community.',
+    highlights: [
+      'Healthcare system partnership',
+      'Early-stage feasibility analysis',
+      'Community stakeholder engagement',
+      'Mixed-use program evaluation',
+      'Long-term ground lease structure under consideration'
+    ],
+    square_feet: 'TBD',
+    units: 'TBD',
+    image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+    gallery_images: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80',
     ],
   },
   'FYNC': {
@@ -216,13 +239,6 @@ export default function ProjectDetail({ slug: slugProp }) {
                         <p className="text-[#070707] font-medium">{project.units}</p>
                       </div>
                     )}
-
-                    {project.year && (
-                      <div>
-                        <p className="text-xs text-[#474E5E] uppercase tracking-wide mb-1">Year</p>
-                        <p className="text-[#070707] font-medium">{project.year}</p>
-                      </div>
-                    )}
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-[#474E5E]/20">
@@ -244,7 +260,7 @@ export default function ProjectDetail({ slug: slugProp }) {
       <ProjectGallery 
         images={project.gallery_images?.length > 0 
           ? project.gallery_images 
-          : [project.image_url || '/website-assets/Project Images/FYMU/FYMU1.jpg']
+          : [project.image_url || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80']
         } 
       />
     </div>
