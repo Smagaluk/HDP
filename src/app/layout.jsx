@@ -3,7 +3,7 @@ import { Providers } from "@/components/Providers";
 
 export const metadata = {
   title: "Heritage Build Value",
-  description: "Heritage Development Partners",
+  description: "Heritage Development Partners | Building Legacy, Creating Value",
 };
 
 export const dynamic = 'force-dynamic';
