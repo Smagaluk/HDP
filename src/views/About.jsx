@@ -112,7 +112,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Values"
-            title="Principles that guide every decision."
+            title="Principles that guide all decision."
             align="center" description={undefined}          />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
